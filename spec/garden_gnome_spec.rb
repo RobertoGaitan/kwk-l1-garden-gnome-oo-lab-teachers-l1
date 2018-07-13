@@ -30,11 +30,6 @@ describe "Garden Gnome" do
     expect(test_gnome4.personality).to eq("evil")
   end
 
-  it "initializes with an argument of hat color" do
-    test_gnome5 = GardenGnome.new("red")
-    expect(test_gnome5.hat_color).to eq("red")
-  end
-
   it "gnaws on trees" do
     gnawing_gnome = GardenGnome.new
     expect(gnawing_gnome.gnaw).to eq("Gnawing on a tree!!!")
@@ -50,6 +45,11 @@ describe "Garden Gnome" do
     intro_gnome.age = 324
     intro_gnome.name = "Frankie the Frightening"
     expect(intro_gnome.introduce_self).to eq("Hello humans, my name is Frankie the Frightening, I am 324 years old, and you'll rue the day you crossed me!")
+  end
+
+  it "initializes with an argument of hat color" do
+    test_gnome5 = GardenGnome.new("red")
+    expect(test_gnome5.hat_color).to eq("red")
   end
 
 end
